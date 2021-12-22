@@ -9,12 +9,12 @@ import {
 function App() {
   return (
     <Router>
-    <Switch>
-      <Route path='/' exact>
-          <Form/>
-      </Route>
-    </Switch>
-  </Router>
+      <Switch>
+        <Route path='/' exact>
+            <Form/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
