@@ -1,10 +1,20 @@
 
+import Form from './components/Form';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <div >
-        Prokje çalışıyopr.
-    </div>
+    <Router>
+    <Switch>
+      <Route path='/' exact>
+          <Form/>
+      </Route>
+    </Switch>
+  </Router>
   );
 }
 
