@@ -1,5 +1,7 @@
 
 import Form from './components/Form';
+import MapFromGoogle from './components/MapFromGoogle';
+import PlacesContextProvider from './context/PlacesContext';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,13 +10,19 @@ import {
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/' exact>
-            <Form/>
-        </Route>
-      </Switch>
-    </Router>
+    <PlacesContextProvider>
+      <Router>
+        <Switch>
+          <Route path='/' exact>
+            <div className='d-flex align-items-center flex-column'>
+              <Form/>
+              <MapFromGoogle/>
+            </div>
+          </Route>
+        </Switch>
+      </Router>
+    </PlacesContextProvider>
+
   );
 }
 
